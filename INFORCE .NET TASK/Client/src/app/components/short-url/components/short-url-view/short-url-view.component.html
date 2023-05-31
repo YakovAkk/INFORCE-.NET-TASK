@@ -1,0 +1,11 @@
+<div class="block">
+   <div>
+      <p>Long link : {{model.longUrl}}</p> 
+      <p>Short link : {{model.host}}{{model.urlCode}}</p>
+      <p>Created by : {{model.createdBy.name}}</p>
+   </div>
+   <div class="button-block"> 
+      <button (click)="OnClickInfo(model)">Info</button>
+      <button *ngIf="_authService.IsLoggedIn | async" (click)="OnClickDelete(model)">Delete</button>
+   </div>
+</div>   

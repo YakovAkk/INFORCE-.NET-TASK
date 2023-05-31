@@ -1,0 +1,20 @@
+<div class="block">
+  
+    <div class="inputBox-wrapper">
+      <div *ngIf="_authService.IsLoggedIn | async">
+        <div class="inputBox">
+          <input type="text" [ngModelOptions]="{standalone: true}"  [(ngModel)]="UrlName">
+          <span>Name</span>
+          <i></i>
+        </div>
+        <button (click)="AddUrlClick()">Add new Url</button>
+      </div>
+    </div>
+
+    <p *ngIf="loading" class="loading">Loading...</p>
+      <div *ngIf="Urls">
+        <app-short-url-view *ngFor = "let url of Urls" [model]="url" (onFetchUrls)="fetchUrls()"></app-short-url-view>
+      </div>
+</div>
+
+

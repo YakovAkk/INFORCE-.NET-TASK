@@ -1,0 +1,11 @@
+<div>
+    <h1>Description</h1>
+    <div class="wrapper">
+        <textarea [ngModelOptions]="{standalone: true}" [(ngModel)]="desc.description" [disabled]="!IsEdit"></textarea>
+    </div>
+    <div class="wrapper-btn">
+        <button (click)="OnClickEdit()" *ngIf="IsUserAdmin">Edit</button>
+        <button (click)="OnClickSubmit()" *ngIf="IsUserAdmin">Submit</button>
+    </div>
+    
+</div>

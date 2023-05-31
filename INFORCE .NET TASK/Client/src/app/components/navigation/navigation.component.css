@@ -1,0 +1,35 @@
+.block{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+.block a:hover{
+    color: #fff;
+}
+
+.block .title{
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #8f8f8f;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.block .links{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}

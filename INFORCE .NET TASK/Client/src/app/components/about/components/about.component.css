@@ -1,0 +1,30 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+textarea{
+    color: #fff; 
+    border: none;
+    width: 800px;
+    height: 120px;
+    overflow-wrap: normal;
+    font-size: 20px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.wrapper-btn{
+    display: flex;
+    justify-content: center;
+}

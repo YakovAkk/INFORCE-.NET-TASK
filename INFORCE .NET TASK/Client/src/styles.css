@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background:#1c1c1c ;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 200px;
+    margin: 10px;  
+}
+
+button:hover{
+    background: #b7b2b2;
+}

@@ -1,0 +1,17 @@
+.block{
+    color: #fff;
+    border-radius: 4px;
+    border: #fff solid;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block .button-block{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}

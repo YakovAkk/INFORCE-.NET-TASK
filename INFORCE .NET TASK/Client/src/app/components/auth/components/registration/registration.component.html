@@ -1,0 +1,29 @@
+<div class="body">
+    <div class="box">
+        <span class="borderLine"></span>
+        <form>
+            <h2>Signup</h2>
+            <div class="inputBox">
+                <input type="text" required="required" [ngModelOptions]="{standalone: true}"  [(ngModel)]="Name">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" [ngModelOptions]="{standalone: true}"  [(ngModel)]="Password">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" [ngModelOptions]="{standalone: true}"  [(ngModel)]="ConfirmPassword">
+                <span>Confirm Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="login">Sign in</a>
+            </div>
+            <input type="submit" value="Registration" (click)="OnClick()"/>
+        </form>
+    </div>
+</div>
+
+

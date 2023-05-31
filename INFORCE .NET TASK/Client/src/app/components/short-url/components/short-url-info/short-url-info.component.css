@@ -1,0 +1,36 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.block{
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block .button-block{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center-btn{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.center-btn .close-btn{
+    width: 300px;
+    height: 70px;
+    font-size: 30px;
+}
+

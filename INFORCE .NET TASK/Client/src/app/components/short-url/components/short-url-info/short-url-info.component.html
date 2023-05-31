@@ -1,0 +1,20 @@
+<div>
+    <h1>Info</h1>
+    <div class="block"> 
+        <div>
+           <p>Long link : {{model.longUrl}}</p> 
+           <p>Short link : {{model.host}}{{model.urlCode}}</p>
+           <p>Creation date : {{model.createdDate}}</p>
+           <p>Created by : {{model.createdBy.name}}</p>
+        </div>
+        <div class="button-block"> 
+           <button (click)="OnClickView()">View</button>
+        </div>
+     </div>
+
+     <div class="center-btn">
+        <button class="close-btn" (click)="OnClickBackToList()">Back to list</button>
+     </div>
+</div>
+
+ 
