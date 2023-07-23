@@ -17,31 +17,15 @@ namespace INFORCE_.NET_TASK.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginInputModel inputModel)
         {
-            try
-            {
-                var result = await _authService.LoginAsync(inputModel);
-
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _authService.LoginAsync(inputModel);
+            return Ok(result);
         }
 
         [HttpPost("registration")]
         public async Task<IActionResult> Registration([FromBody] UserRegistrationInputModel inputModel)
         {
-            try
-            {
-                var result = await _authService.RegisterAsync(inputModel);
-
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _authService.RegisterAsync(inputModel);
+            return Ok(result);
         }
     }
 }

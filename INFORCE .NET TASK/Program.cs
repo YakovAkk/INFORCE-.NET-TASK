@@ -1,4 +1,5 @@
 using INFORCE_.NET_TASK.DataDomain.Database;
+using INFORCE_.NET_TASK.Middleware.Extension;
 using INFORCE_.NET_TASK.Services.Model.Configuration;
 using INFORCE_.NET_TASK.Services.Services;
 using INFORCE_.NET_TASK.Services.Services.Base;
@@ -67,6 +68,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     });
 
 var app = builder.Build();
+
+app.UseExceptionsHandler();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -22,29 +22,16 @@ namespace INFORCE_.NET_TASK.Controllers
             var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId == null)
                 return BadRequest();
-            try
-            {
-                await _descriptionService.SetDescriptionAsync(inputModel);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            await _descriptionService.SetDescriptionAsync(inputModel);
+            return Ok();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetDescription()
         {
-            try
-            {
-                var result = await _descriptionService.GetDescriptionAsync();
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _descriptionService.GetDescriptionAsync();
+            return Ok(result);
         }
     }
 }

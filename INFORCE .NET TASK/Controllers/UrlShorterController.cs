@@ -22,44 +22,22 @@ namespace INFORCE_.NET_TASK.Controllers
             var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId == null)
                 return BadRequest();
-            try
-            {
-                await _urlShorterService.CreateShortUrlAsync(inputModel, userId);
-
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _urlShorterService.CreateShortUrlAsync(inputModel, userId);
+            return Ok();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllUrls()
         {
-            try
-            {
-                var result = await _urlShorterService.GetAllAsync(HttpContext);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            } 
+            var result = await _urlShorterService.GetAllAsync(HttpContext);
+            return Ok(result);
         }
 
         [HttpGet("{id}"), Authorize]
         public async Task<IActionResult> GetById([FromRoute] string id)
         {
-            try
-            {
-                var result = await _urlShorterService.GetByIdAsync(id);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _urlShorterService.GetByIdAsync(id);
+            return Ok(result);
         }
 
         [HttpDelete("for-user/{urlCode}"), Authorize]
@@ -69,15 +47,8 @@ namespace INFORCE_.NET_TASK.Controllers
             if (userId == null)
                 return BadRequest();
 
-            try
-            {
-                await _urlShorterService.DeleteUrlAsync(userId, urlCode);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _urlShorterService.DeleteUrlAsync(userId, urlCode);
+            return Ok();
         }
     }
 }
